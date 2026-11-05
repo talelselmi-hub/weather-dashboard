@@ -20,6 +20,4 @@ OpenWeatherMap API (Données météo et coordonnées geocode)
 Leaflet.js & OpenStreetMap (Cartographie interactive)
 
 🔗 Liens
-Dépôt GitHub : github.com/talelselmi-hub/weather-dashboard
-
-Déploiement en ligne : talelselmi-hub.github.io/weather-dashboard
+https://github.com/talelselmi-hub/weather-dashboard
