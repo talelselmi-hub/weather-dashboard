@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard & Map</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Feuille de style Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Weather & Interactive Map Dashboard</h1>
+            <p>Recherchez une ville pour voir la météo en direct, les prévisions et sa position sur la carte.</p>
+        </header>
+
+        <main>
+            <!-- Barre de recherche -->
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Entrez une ville (ex: Kairouan, Paris, Tokyo)...">
+                <button id="search-btn">Rechercher</button>
+            </div>
+
+            <!-- Historique des recherches -->
+            <div class="recent-searches" id="recent-searches"></div>
+
+            <!-- Indication de chargement -->
+            <div id="loader" class="loader hidden">Chargement en cours...</div>
+
+            <div class="dashboard-grid">
+                <!-- Panneau d'informations météo -->
+                <div class="weather-card">
+                    <h2 id="city-name">Entrez une ville</h2>
+                    <div class="temp-container">
+                        <span id="temp">--</span><span class="unit">°C</span>
+                    </div>
+                    <p id="description">Statut météo</p>
+                    <div class="details">
+                        <p><strong>Humidité :</strong> <span id="humidity">--</span>%</p>
+                        <p><strong>Vent :</strong> <span id="wind">--</span> km/h</p>
+                    </div>
+                </div>
+
+                <!-- Carte Leaflet -->
+                <div id="map"></div>
+            </div>
+
+            <!-- Section Prévisions 5 Jours -->
+            <section class="forecast-section">
+                <h2>Prévisions sur 5 jours</h2>
+                <div id="forecast-container" class="forecast-grid"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
